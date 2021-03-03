@@ -1,7 +1,7 @@
 import request from 'superagent';
 
 // API url 
-const URL = 'http://localhost:3000';
+const URL = 'https://rocky-savannah-62168.herokuapp.com';
 
 export async function signUpUser(email, password) {
     const response = await request
