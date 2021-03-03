@@ -11,10 +11,9 @@ import Header from './components/Header.js';
 import TodosListPage from './TodosListPage/TodosListPage.js';
 import SignUpPage from './AuthPages/SignUpPage.js';
 import LoginPage from './AuthPages/LoginPage.js';
-
-
-
 import { getUserFromLocalStorage, putUserInLocalStorage } from './local-storage-utils';
+
+import PrivateRoute from './components/PrivateRoute.js';
 
 export default class App extends Component {
   state = {
@@ -45,7 +44,7 @@ export default class App extends Component {
               exact
               render={(routerProps) => <Home {...routerProps} />}
             />
-            <Route
+            <PrivateRoute
               path="/todos"
               exact
               token={user && user.token}
