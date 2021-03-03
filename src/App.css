@@ -27,3 +27,8 @@ label {
 .completed {
   text-decoration: line-through;
 }
+
+.home-page {
+  color: rgb(110, 110, 3);
+  font-size: 60px;
+}

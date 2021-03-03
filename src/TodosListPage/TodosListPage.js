@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { getTodos, addTodo, completeTodo } from '../api-utils.js';
+
 export default class TodosListPage extends Component {
     state = {
         todos: [],
@@ -38,7 +39,7 @@ export default class TodosListPage extends Component {
                     <input value={this.state.todo} onChange={this.handleTodoChange} />
                     <button>Add todo</button>
                 </form>
-                {!this.state.todos.length && <p>All tasks complete!!</p>}
+                {!this.state.todos.length && <p>No tasks to tasks complete!!</p>}
                 {this.state.todos.map(todo =>
                     <p
                         key={`${todo.todo}-${todo.id}`}
